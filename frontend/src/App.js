@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div class="p-grid p-justify-between">
         <div class="p-md-1"></div>
-        <div class="p-col-12 p-md-8" style={{ backgroundColor: '#FAF9F6' }} >
+        <div class="p-col-12 p-md-10" style={{ backgroundColor: '#FAF9F6' }} >
           <Api />
         </div>
         <div class="p-md-1"></div>

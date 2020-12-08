@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hlavnicards from './Hlavnicards';
 import Datatable from './Datatable';
-import Charts from './Chart';
-import DonutChart from './DonutChart';
-import BarChart from './BarChart';
 import DataTableDemo from './CRUDdatatable';
 import {Button} from 'primereact/button';
+import {ReactDataGrida} from './ReactDataGrida';
+import {initialRowss} from './ApiContext';
+
+
 
 class Api extends Component {
 
@@ -69,7 +69,11 @@ this.componentDidMount = this.componentDidMount.bind(this);
       <div class="p-grid">
         <div class="p-col-12"><Datatable summaryCountries={this.state.countries} /></div>
         <div class="p-col-12"><DataTableDemo crudPersons={this.state.persons} refr={this.componentDidMount} /></div>
+        <initialRowss.Provider>
+        <div class="p-col-12"><ReactDataGrida /></div>
+        </initialRowss.Provider>
         <div class="p-col-12" style={{ textAlign: 'center' }}><Button  label="Refresh" icon="pi pi-plus" onClick={this.componentDidMount} style={{ align: 'right' }}/></div>
+   
       </div>
 
 
